@@ -70,3 +70,34 @@ body {
 ::-webkit-scrollbar {
   display: none;
 }
+
+$breakpoint-mobile: 480px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+
+@media screen and (max-width: $breakpoint-mobile) {
+  .main-page {
+    .content {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
+}
+
+// Media query for tablet screens
+@media screen and (min-width: $breakpoint-tablet) and (max-width: $breakpoint-desktop) {
+  .main-page {
+    .content {
+      gap: 2rem;
+    }
+  }
+}
+
+// Media query for desktop screens
+@media screen and (min-width: $breakpoint-desktop) {
+  .main-page {
+    .content {
+      gap: 3rem;
+    }
+  }
+}
